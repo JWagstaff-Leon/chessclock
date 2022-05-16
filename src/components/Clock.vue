@@ -26,8 +26,8 @@ export default
         const whiteSeconds = computed(() => Math.floor((AppState.white.time % 60000) / 1000));
         const blackMinutes = computed(() => Math.floor(AppState.black.time / 60000));
         const blackSeconds = computed(() => Math.floor((AppState.black.time % 60000) / 1000));
-        const whiteMilliseconds = computed(() => ((AppState.white.time % 1000) / 1000).toFixed(3).toString().substring(1));
-        const blackMilliseconds = computed(() => ((AppState.black.time % 1000) / 1000).toFixed(3).toString().substring(1));
+        const whiteMilliseconds = computed(() => ((AppState.white.time % 1000) / 1000).toFixed(1).toString().substring(1));
+        const blackMilliseconds = computed(() => ((AppState.black.time % 1000) / 1000).toFixed(1).toString().substring(1));
         
         const whiteLoss = ref(false);
         const blackLoss = ref(false);
