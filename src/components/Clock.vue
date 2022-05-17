@@ -36,13 +36,11 @@ export default
         let startTime = new Date();
         function switchToWhite()
         {
-            console.log("switching to white")
             AppState.black.moves++;
             AppState.whitesTurn = true;
             clearInterval(intervalId);
             if(AppState.black.moves > 1)
             {
-                console.log("black is past their first move")
                 AppState.black.time += startTime.valueOf();
                 startTime = new Date();
                 AppState.black.time -= startTime.valueOf();
@@ -75,13 +73,11 @@ export default
 
         function switchToBlack()
         {
-            console.log("switching to black")
             AppState.white.moves++;
             AppState.whitesTurn = false;
             clearInterval(intervalId);
             if(AppState.white.moves > 1)
             {
-                console.log("white is past their first move")
                 AppState.white.time += startTime.valueOf();
                 startTime = new Date();
                 AppState.white.time -= startTime.valueOf();
